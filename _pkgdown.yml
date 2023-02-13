@@ -1,0 +1,7 @@
+title: amphiBR
+url: https://paulobarros.github.io/amphiBR/
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  theme: dracula
+lang: pt

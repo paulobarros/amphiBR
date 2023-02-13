@@ -1,14 +1,14 @@
 Package: amphiBR
-Title: What the Package Does (One Line, Title Case)
+Title: A R Dataset for the official Brazilian List of Amphibians
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Paulo", "Barros", , "pbarrosbio@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9839-0796"))
+Description: A R Dataset for the official Brazilian List of Amphibians published by the Brazilian Herpetological Society. This is a personal initiative, the data presented here was taken from the publication by Segalla et al (2021) and aims to help students and professionals in building species list of the Brazilian amphibian fauna.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/paulobarros/amphiBR
+URL: https://github.com/paulobarros/amphiBR,
+    https://paulobarros.github.io/amphiBR/
 BugReports: https://github.com/paulobarros/amphiBR/issues
