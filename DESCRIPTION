@@ -2,7 +2,7 @@ Package: amphiBR
 Title: A R Dataset for the official Brazilian List of Amphibians
 Version: 0.0.0.9000
 Authors@R: 
-    person("Paulo", "Barros", , "pbarrosbio@gmail.com", role = c("aut", "cre"),
+    person("Paulo Barros de ", "Abreu Junior", , "pbarrosbio@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9839-0796"))
 Description: A R Dataset for the official Brazilian List of Amphibians, published by the Brazilian Herpetological Society. This is a personal initiative, the data presented here was taken from the publication by Segalla et al (2021) and aims to help students and professionals in building species list of the Brazilian amphibian fauna.
 License: GPL (>= 3)

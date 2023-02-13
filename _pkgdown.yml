@@ -3,5 +3,5 @@ url: https://paulobarros.github.io/amphiBR/
 template:
   bootstrap: 5
   bootswatch: flatly
-  theme: dracula
+  theme: tango
 lang: pt
