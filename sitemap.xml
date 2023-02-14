@@ -7,6 +7,12 @@
     <loc>https://paulobarros.github.io/amphiBR/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://paulobarros.github.io/amphiBR/articles/amphiBR.html</loc>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/amphiBR/articles/index.html</loc>
+  </url>
+  <url>
     <loc>https://paulobarros.github.io/amphiBR/authors.html</loc>
   </url>
   <url>
@@ -17,5 +23,8 @@
   </url>
   <url>
     <loc>https://paulobarros.github.io/amphiBR/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/amphiBR/reference/pipe.html</loc>
   </url>
 </urlset>
