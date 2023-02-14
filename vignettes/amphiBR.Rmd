@@ -28,7 +28,7 @@ Para realizar essa tarefa precisaremos de alguns pacotes auxiliares além do `am
 # install.packages("tidyverse")
 # install.pakcages("kableExtra")
 
-library(tidyverse)
+library(dplyr)
 library(kableExtra)
 ```
 
@@ -38,8 +38,8 @@ Existem diversas formas de entrar com uma lista de espécies em particular. Ela 
 
 ```{r}
 minhas_especies <- amphibiansBR %>%
-  filter(sp_num %in% sample(1:1188, size = 20, replace = FALSE)) %>%
-  select(order, family, subfamily,sp_num, genus, epithet)
+  dplyr::filter(sp_num %in% sample(1:1188, size = 20, replace = FALSE)) %>%
+  dplyr::select(order, family, subfamily,sp_num, genus, epithet)
 
 minhas_especies
 ```
@@ -50,14 +50,14 @@ Com a nossa lista das espécies de interesse em mãos, basta agora filtar o noss
 options(knitr.kable.NA = '')
 
 amphibiansBR %>%
-  filter(sp_num %in% minhas_especies$sp_num ) %>%
-  select(order, family, subfamily, genus, epithet) %>%
-  kable(col.names = c("Ordem","Família", "Subfamília","Gênero","Epíteto Específico")) %>%
-  kable_classic_2() %>%
-  column_spec(1:3,bold = T) %>%
-  column_spec(4:5, italic = T) %>%
-  collapse_rows(columns = 1:3, valign = "top") %>%
-  row_spec(0, bold = T)
+  dplyr::filter(sp_num %in% minhas_especies$sp_num ) %>%
+  dplyr::select(order, family, subfamily, genus, epithet) %>%
+  kableExtra::kable(col.names = c("Ordem","Família", "Subfamília","Gênero","Epíteto Específico")) %>%
+  kableExtra::kable_classic_2() %>%
+  kableExtra::column_spec(1:3,bold = T) %>%
+  kableExtra::column_spec(4:5, italic = T) %>%
+  kableExtra::collapse_rows(columns = 1:3, valign = "top") %>%
+  kableExtra::row_spec(0, bold = T)
   
 ```
 
