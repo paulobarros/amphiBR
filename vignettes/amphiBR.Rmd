@@ -1,0 +1,70 @@
+---
+title: "amphiBR"
+output: rmarkdown::html_vignette
+bibliography: referencias.bib
+csl: abnt.csl
+vignette: >
+  %\VignetteIndexEntry{amphiBR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(amphiBR)
+```
+
+Neste pequeno exemplo vamos abordar como gerar uma lista de espécies obedecendo a taxonomia proposta pela Lista de Anfíbios do Brasil da SBH  [@segalla2021lista].
+
+Para realizar essa tarefa precisaremos de alguns pacotes auxiliares além do `amphiBR`. O código para instalação dos pacotes está comentado, caso você ainda não possua o pacote instalado basta descomentar e executar as linhas correspondentes.
+
+```{r}
+# install.packages("tidyverse")
+# install.pakcages("kableExtra")
+
+library(tidyverse)
+library(kableExtra)
+```
+
+Precisamos primeiro obter uma lista aleatória de espécies para usar no nosso exemplo, importante frisar que ao utilizar a sua lista de espécies para filtrar o banco de dados, a nomenclatura deve seguir a adotada por [@segalla2021lista] no qual se baseia este pacote. No nosso caso utilizaremos os dados da própria lista para sortear 20 espécies aleatoriamente.
+
+Existem diversas formas de entrar com uma lista de espécies em particular. Ela pode ser criada diretamente no script como um `data.frame` contendo duas colunas, uma para **gênero** e outra para o **epíteto específico**, ou pode ser lida a partir de uma planila do excel ou arquivo .csv/.txt. 
+
+```{r}
+minhas_especies <- amphibiansBR %>%
+  filter(sp_num %in% sample(1:1188, size = 20, replace = FALSE)) %>%
+  select(order, family, subfamily,sp_num, genus, epithet)
+
+minhas_especies
+```
+
+Com a nossa lista das espécies de interesse em mãos, basta agora filtar o nosso banco de dados e gerar a tabela, faremos tudo isso num mesmo trecho de código.
+
+```{r}
+options(knitr.kable.NA = '')
+
+amphibiansBR %>%
+  filter(sp_num %in% minhas_especies$sp_num ) %>%
+  select(order, family, subfamily, genus, epithet) %>%
+  kable(col.names = c("Ordem","Família", "Subfamília","Gênero","Epíteto Específico")) %>%
+  kable_classic_2() %>%
+  column_spec(1:3,bold = T) %>%
+  column_spec(4:5, italic = T) %>%
+  collapse_rows(columns = 1:3, valign = "top") %>%
+  row_spec(0, bold = T)
+  
+```
+
+Simples não? Boas listas! Dúvidas, críticas, problemas ou sugestões <pbarrosbio@gmail.com>
+
+
+
+##### Referências
+
+<div id="refs"></div>

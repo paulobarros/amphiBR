@@ -1,8 +1,9 @@
 pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
-articles: {}
-last_built: 2023-02-13T19:48Z
+articles:
+  amphiBR: amphiBR.html
+last_built: 2023-02-14T01:05Z
 urls:
   reference: https://paulobarros.github.io/amphiBR/reference
   article: https://paulobarros.github.io/amphiBR/articles
