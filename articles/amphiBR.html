@@ -116,33 +116,33 @@ específico</strong>, ou pode ser lida a partir de uma planila do excel
 ou arquivo .csv/.txt.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">minhas_especies</span> <span class="op">&lt;-</span> <span class="va">amphibiansBR</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">sp_num</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1188</span>, size <span class="op">=</span> <span class="fl">20</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">order</span>, <span class="va">family</span>, <span class="va">subfamily</span>,<span class="va">sp_num</span>, <span class="va">genus</span>, <span class="va">epithet</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">sp_num</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1188</span>, size <span class="op">=</span> <span class="fl">20</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">order</span>, <span class="va">family</span>, <span class="va">subfamily</span>,<span class="va">sp_num</span>, <span class="va">genus</span>, <span class="va">epithet</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">minhas_especies</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 20 × 6</span></span></span>
-<span><span class="co">#&gt;    order family           subfamily         sp_num genus            epithet     </span></span>
-<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Anura Aromobatidae     (Allobatinae)     5      Allobates        bacurau     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Anura Aromobatidae     (Allobatinae)     22     Allobates        masniger    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Anura Brachycephalidae <span style="color: #BB0000;">NA</span>                45     Brachycephalus   auroguttatus</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Anura Bufonidae        <span style="color: #BB0000;">NA</span>                154    Melanophryniscus klappenbachi</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Anura Bufonidae        <span style="color: #BB0000;">NA</span>                158    Melanophryniscus moreirae    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Anura Cycloramphidae   <span style="color: #BB0000;">NA</span>                308    Cycloramphus     dubius      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Anura Hemiphractidae   <span style="color: #BB0000;">NA</span>                373    Eotheca          fissipes    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Anura Hylidae          (Cophomantinae)   406    Aplastodiscus    weygoldti   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Anura Hylidae          (Cophomantinae)   424    Boana            claresignata</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Anura Hylidae          (Cophomantinae)   460    Boana            pulchella   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> Anura Hylidae          (Cophomantinae)   493    Bokermannohyla   napolii     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> Anura Hylidae          (Lophyohylinae)   609    Phyllodytes      punctatus   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> Anura Hylidae          (Pseudinae)       632    Pseudis          cardosoi    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> Anura Hylidae          (Scinaxinae)      733    Scinax           similis     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> Anura Hylidae          (Scinaxinae)      741    Scinax           tropicalia  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> Anura Leptodactylidae  (Leiuperinae)     848    Physalaemus      nattereri   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> Anura Leptodactylidae  (Leiuperinae)     873    Pseudopaludicola jaredi      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> Anura Leptodactylidae  (Leptodactylinae) 906    Adenomera        saci        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> Anura Leptodactylidae  (Leptodactylinae) 954    Leptodactylus    pentadactyl…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> Anura Ranidae          <span style="color: #BB0000;">NA</span>                1143   Aquarana         catesbeiana</span></span></code></pre></div>
+<span><span class="co">#&gt;    order       family          subfamily         sp_num genus            epithet</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Anura       Bufonidae       <span style="color: #BB0000;">NA</span>                   149 Melanophryniscus biancae</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Anura       Bufonidae       <span style="color: #BB0000;">NA</span>                   208 Rhinella         sebbeni</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Anura       Ceratophryidae  <span style="color: #BB0000;">NA</span>                   228 Ceratophrys      cornuta</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Anura       Craugastoridae  (Ceuthomantinae)     264 Pristimantis     pluvian</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Anura       Hemiphractidae  <span style="color: #BB0000;">NA</span>                   384 Fritziana        tonimi </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Anura       Hylidae         (Cophomantinae)      422 Boana            cinera…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Anura       Hylidae         (Cophomantinae)      463 Boana            secede…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Anura       Hylidae         (Cophomantinae)      466 Boana            stellae</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Anura       Hylidae         (Lophyohylinae)      577 Dryaderces       infram…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Anura       Hylidae         (Scinaxinae)         640 Scinax           acumin…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> Anura       Hylidae         (Scinaxinae)         672 Scinax           cuspid…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> Anura       Hylidae         (Scinaxinae)         718 Scinax           peixot…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> Anura       Hylidae         (Scinaxinae)         726 Scinax           rogeri…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> Anura       Hylidae         (Scinaxinae)         751 Sphaenorhynchus  cammae…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> Anura       Hylodidae       <span style="color: #BB0000;">NA</span>                   768 Crossodactylus   franci…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> Anura       Leptodactylidae (Leptodactylinae)    890 Adenomera        chicom…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> Anura       Leptodactylidae (Leptodactylinae)    939 Leptodactylus    leptod…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> Anura       Microhylidae    (Gastrophryninae)   <span style="text-decoration: underline;">1</span>012 Chiasmocleis     papach…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> Anura       Phyllomedusidae <span style="color: #BB0000;">NA</span>                  <span style="text-decoration: underline;">1</span>103 Phasmahyla       cruzi  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> Gymnophiona Rhinatrematidae <span style="color: #BB0000;">NA</span>                  <span style="text-decoration: underline;">1</span>157 Rhinatrema       ron</span></span></code></pre></div>
 <p>Com a nossa lista das espécies de interesse em mãos, basta agora
 filtar o nosso banco de dados e gerar a tabela, faremos tudo isso num
 mesmo trecho de código.</p>
@@ -150,14 +150,14 @@ mesmo trecho de código.</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>knitr.kable.NA <span class="op">=</span> <span class="st">''</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">amphibiansBR</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">sp_num</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">minhas_especies</span><span class="op">$</span><span class="va">sp_num</span> <span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">order</span>, <span class="va">family</span>, <span class="va">subfamily</span>, <span class="va">genus</span>, <span class="va">epithet</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Ordem"</span>,<span class="st">"Família"</span>, <span class="st">"Subfamília"</span>,<span class="st">"Gênero"</span>,<span class="st">"Epíteto Específico"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html" class="external-link">kable_classic_2</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html" class="external-link">column_spec</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,bold <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html" class="external-link">column_spec</a></span><span class="op">(</span><span class="fl">4</span><span class="op">:</span><span class="fl">5</span>, italic <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/collapse_rows.html" class="external-link">collapse_rows</a></span><span class="op">(</span>columns <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, valign <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/row_spec.html" class="external-link">row_spec</a></span><span class="op">(</span><span class="fl">0</span>, bold <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">sp_num</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">minhas_especies</span><span class="op">$</span><span class="va">sp_num</span> <span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">order</span>, <span class="va">family</span>, <span class="va">subfamily</span>, <span class="va">genus</span>, <span class="va">epithet</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Ordem"</span>,<span class="st">"Família"</span>, <span class="st">"Subfamília"</span>,<span class="st">"Gênero"</span>,<span class="st">"Epíteto Específico"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_classic.html" class="external-link">kable_classic_2</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html" class="external-link">column_spec</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,bold <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/column_spec.html" class="external-link">column_spec</a></span><span class="op">(</span><span class="fl">4</span><span class="op">:</span><span class="fl">5</span>, italic <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/collapse_rows.html" class="external-link">collapse_rows</a></span><span class="op">(</span>columns <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, valign <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/row_spec.html" class="external-link">row_spec</a></span><span class="op">(</span><span class="fl">0</span>, bold <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></code></pre></div>
 <table class="table  lightable-classic-2" style='font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'>
 <thead><tr>
 <th style="text-align:left;font-weight: bold;">
@@ -182,49 +182,15 @@ Epíteto Específico
 Anura
 </td>
 <td style="text-align:left;font-weight: bold;">
-Aromobatidae
-</td>
-<td style="text-align:left;font-weight: bold;">
-(Allobatinae)
-</td>
-<td style="text-align:left;font-style: italic;">
-Allobates
-</td>
-<td style="text-align:left;font-style: italic;">
-bacurau
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-Anura
-</td>
-<td style="text-align:left;font-weight: bold;">
-Aromobatidae
-</td>
-<td style="text-align:left;font-weight: bold;">
-(Allobatinae)
-</td>
-<td style="text-align:left;font-style: italic;">
-Allobates
-</td>
-<td style="text-align:left;font-style: italic;">
-masniger
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-Anura
-</td>
-<td style="text-align:left;font-weight: bold;">
-Brachycephalidae
+Bufonidae
 </td>
 <td style="text-align:left;font-weight: bold;">
 </td>
 <td style="text-align:left;font-style: italic;">
-Brachycephalus
+Melanophryniscus
 </td>
 <td style="text-align:left;font-style: italic;">
-auroguttatus
+biancae
 </td>
 </tr>
 <tr>
@@ -237,10 +203,10 @@ Bufonidae
 <td style="text-align:left;font-weight: bold;">
 </td>
 <td style="text-align:left;font-style: italic;">
-Melanophryniscus
+Rhinella
 </td>
 <td style="text-align:left;font-style: italic;">
-klappenbachi
+sebbeni
 </td>
 </tr>
 <tr>
@@ -248,15 +214,15 @@ klappenbachi
 Anura
 </td>
 <td style="text-align:left;font-weight: bold;">
-Bufonidae
+Ceratophryidae
 </td>
 <td style="text-align:left;font-weight: bold;">
 </td>
 <td style="text-align:left;font-style: italic;">
-Melanophryniscus
+Ceratophrys
 </td>
 <td style="text-align:left;font-style: italic;">
-moreirae
+cornuta
 </td>
 </tr>
 <tr>
@@ -264,15 +230,16 @@ moreirae
 Anura
 </td>
 <td style="text-align:left;font-weight: bold;">
-Cycloramphidae
+Craugastoridae
 </td>
 <td style="text-align:left;font-weight: bold;">
+(Ceuthomantinae)
 </td>
 <td style="text-align:left;font-style: italic;">
-Cycloramphus
+Pristimantis
 </td>
 <td style="text-align:left;font-style: italic;">
-dubius
+pluvian
 </td>
 </tr>
 <tr>
@@ -285,27 +252,10 @@ Hemiphractidae
 <td style="text-align:left;font-weight: bold;">
 </td>
 <td style="text-align:left;font-style: italic;">
-Eotheca
+Fritziana
 </td>
 <td style="text-align:left;font-style: italic;">
-fissipes
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-Anura
-</td>
-<td style="text-align:left;font-weight: bold;">
-Hylidae
-</td>
-<td style="text-align:left;font-weight: bold;">
-(Cophomantinae)
-</td>
-<td style="text-align:left;font-style: italic;">
-Aplastodiscus
-</td>
-<td style="text-align:left;font-style: italic;">
-weygoldti
+tonimi
 </td>
 </tr>
 <tr>
@@ -322,7 +272,7 @@ Hylidae
 Boana
 </td>
 <td style="text-align:left;font-style: italic;">
-claresignata
+cinerascens
 </td>
 </tr>
 <tr>
@@ -339,7 +289,7 @@ Hylidae
 Boana
 </td>
 <td style="text-align:left;font-style: italic;">
-pulchella
+secedens
 </td>
 </tr>
 <tr>
@@ -353,10 +303,10 @@ Hylidae
 (Cophomantinae)
 </td>
 <td style="text-align:left;font-style: italic;">
-Bokermannohyla
+Boana
 </td>
 <td style="text-align:left;font-style: italic;">
-napolii
+stellae
 </td>
 </tr>
 <tr>
@@ -370,27 +320,10 @@ Hylidae
 (Lophyohylinae)
 </td>
 <td style="text-align:left;font-style: italic;">
-Phyllodytes
+Dryaderces
 </td>
 <td style="text-align:left;font-style: italic;">
-punctatus
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-Anura
-</td>
-<td style="text-align:left;font-weight: bold;">
-Hylidae
-</td>
-<td style="text-align:left;font-weight: bold;">
-(Pseudinae)
-</td>
-<td style="text-align:left;font-style: italic;">
-Pseudis
-</td>
-<td style="text-align:left;font-style: italic;">
-cardosoi
+inframaculata
 </td>
 </tr>
 <tr>
@@ -407,7 +340,7 @@ Hylidae
 Scinax
 </td>
 <td style="text-align:left;font-style: italic;">
-similis
+acuminatus
 </td>
 </tr>
 <tr>
@@ -424,7 +357,7 @@ Hylidae
 Scinax
 </td>
 <td style="text-align:left;font-style: italic;">
-tropicalia
+cuspidatus
 </td>
 </tr>
 <tr>
@@ -432,16 +365,16 @@ tropicalia
 Anura
 </td>
 <td style="text-align:left;font-weight: bold;">
-Leptodactylidae
+Hylidae
 </td>
 <td style="text-align:left;font-weight: bold;">
-(Leiuperinae)
+(Scinaxinae)
 </td>
 <td style="text-align:left;font-style: italic;">
-Physalaemus
+Scinax
 </td>
 <td style="text-align:left;font-style: italic;">
-nattereri
+peixotoi
 </td>
 </tr>
 <tr>
@@ -449,16 +382,49 @@ nattereri
 Anura
 </td>
 <td style="text-align:left;font-weight: bold;">
-Leptodactylidae
+Hylidae
 </td>
 <td style="text-align:left;font-weight: bold;">
-(Leiuperinae)
+(Scinaxinae)
 </td>
 <td style="text-align:left;font-style: italic;">
-Pseudopaludicola
+Scinax
 </td>
 <td style="text-align:left;font-style: italic;">
-jaredi
+rogerioi
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Anura
+</td>
+<td style="text-align:left;font-weight: bold;">
+Hylidae
+</td>
+<td style="text-align:left;font-weight: bold;">
+(Scinaxinae)
+</td>
+<td style="text-align:left;font-style: italic;">
+Sphaenorhynchus
+</td>
+<td style="text-align:left;font-style: italic;">
+cammaeus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Anura
+</td>
+<td style="text-align:left;font-weight: bold;">
+Hylodidae
+</td>
+<td style="text-align:left;font-weight: bold;">
+</td>
+<td style="text-align:left;font-style: italic;">
+Crossodactylus
+</td>
+<td style="text-align:left;font-style: italic;">
+franciscanus
 </td>
 </tr>
 <tr>
@@ -475,7 +441,7 @@ Leptodactylidae
 Adenomera
 </td>
 <td style="text-align:left;font-style: italic;">
-saci
+chicomendesi
 </td>
 </tr>
 <tr>
@@ -492,7 +458,7 @@ Leptodactylidae
 Leptodactylus
 </td>
 <td style="text-align:left;font-style: italic;">
-pentadactylus
+leptodactyloides
 </td>
 </tr>
 <tr>
@@ -500,15 +466,48 @@ pentadactylus
 Anura
 </td>
 <td style="text-align:left;font-weight: bold;">
-Ranidae
+Microhylidae
+</td>
+<td style="text-align:left;font-weight: bold;">
+(Gastrophryninae)
+</td>
+<td style="text-align:left;font-style: italic;">
+Chiasmocleis
+</td>
+<td style="text-align:left;font-style: italic;">
+papachibe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Anura
+</td>
+<td style="text-align:left;font-weight: bold;">
+Phyllomedusidae
 </td>
 <td style="text-align:left;font-weight: bold;">
 </td>
 <td style="text-align:left;font-style: italic;">
-Aquarana
+Phasmahyla
 </td>
 <td style="text-align:left;font-style: italic;">
-catesbeiana
+cruzi
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Gymnophiona
+</td>
+<td style="text-align:left;font-weight: bold;">
+Rhinatrematidae
+</td>
+<td style="text-align:left;font-weight: bold;">
+</td>
+<td style="text-align:left;font-style: italic;">
+Rhinatrema
+</td>
+<td style="text-align:left;font-style: italic;">
+ron
 </td>
 </tr>
 </tbody>
