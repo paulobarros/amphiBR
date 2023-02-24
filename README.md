@@ -5,6 +5,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/paulobarros/amphiBR/blob/master/LICENSE.md)
 [![Twitter
 Follow](https://img.shields.io/twitter/follow/pbarrosjr?color=%2315202B&label=Seguir%20%40pbarrosjr&style=social)](https://twitter.com/pbarrosjr)
+[![pix](https://img.shields.io/badge/Apoie%20com-PIX-brightgreen)](https://nubank.com.br/pagar/v67wv/tuh5iRS2YJ)
 <!-- badges: end -->
 
 Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.
@@ -33,7 +34,7 @@ library(amphiBR)
 
 ## Dataset
 
-O dataset consiste de **1188** linhas com 8 colunas:
+O dataset consiste de **1188** linhas com 10 colunas:
 
 
 `order` - Ordem
@@ -48,9 +49,13 @@ O dataset consiste de **1188** linhas com 8 colunas:
 
 `epithet` - Epíteto específico
 
+`species` - Nome científico
+
 `author` - Autoria
 
 `status` - Observações
+
+`category` - Cateogoria de Ameaça pela Portaria MMA 300/2022
 
 O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:
 

@@ -16,10 +16,10 @@ Depends:
     R (>= 3.5)
 LazyData: true
 Suggests: 
+    dplyr,
+    kableExtra,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
 Imports: 
-    dplyr,
-    kableExtra,
     magrittr
