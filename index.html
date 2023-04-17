@@ -85,34 +85,56 @@
 <div class="section level2">
 <h2 id="dataset">Dataset<a class="anchor" aria-label="anchor" href="#dataset"></a>
 </h2>
-<p>O dataset consiste de <strong>1188</strong> linhas com 10 colunas:</p>
+<p>O dataset consiste de <strong>1188</strong> linhas com 49 colunas:</p>
+<p><code>species_id</code> - Número da espécie na lista</p>
 <p><code>order</code> - Ordem</p>
 <p><code>family</code> - Família</p>
 <p><code>subfamily</code> - Subfamília</p>
-<p><code>sp_num</code> - Número da espécie na lista</p>
 <p><code>genus</code> - Gênero</p>
 <p><code>epithet</code> - Epíteto específico</p>
 <p><code>species</code> - Nome científico</p>
 <p><code>author</code> - Autoria</p>
-<p><code>status</code> - Observações</p>
+<p><code>status</code> - Observações gerais do autor da Lista</p>
+<p><code>common_name_br</code> - Nome popular no Brasil</p>
 <p><code>category</code> - Cateogoria de Ameaça pela Portaria MMA 300/2022</p>
+<p><code>endemic_br</code> - Se a espécie é ou não endêmica do país</p>
+<p><code>AC-TO</code> - Ocorrência a nível estadual da espécie no país (1=ocorre, 0=não ocorre)</p>
+<p><code>AF-UNK</code> - Ocorrência a nível de Biomas</p>
+<ul>
+<li><p>AF = Mata ATlântica</p></li>
+<li><p>PAN = Pantanal</p></li>
+<li><p>PAM = Pampa</p></li>
+<li><p>AMZ = Amazônia</p></li>
+<li><p>CER = Cerrado</p></li>
+<li><p>CAA = Caatinga</p></li>
+<li><p>UNK = Desconhecido</p></li>
+</ul>
+<p><code>tad_ext_morhp</code> - Descrição da morfologia externa do girino/larva</p>
+<p><code>tad_int_oral_feat</code> - Descrição das características internas da cavidade oral do girino/larva</p>
+<p><code>tad_chond</code> - Descrição do chondocrânio do girino/larva</p>
 <p>O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> amphibiansBR</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1,188 × 8</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   order family        subfamily     sp_num genus       epithet        author status</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="sc">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>         <span class="er">&lt;</span>chr<span class="sc">&gt;</span>         <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>       <span class="er">&lt;</span>chr<span class="sc">&gt;</span>          <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span> Anura Allophrynidae <span class="cn">NA</span>            <span class="dv">1</span>      Allophryne  relicta        Caram… <span class="cn">NA</span>    </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span> Anura Allophrynidae <span class="cn">NA</span>            <span class="dv">2</span>      Allophryne  resplendens    Castr… <span class="cn">NA</span>    </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span> Anura Allophrynidae <span class="cn">NA</span>            <span class="dv">3</span>      Allophryne  ruthveni       Gaige… <span class="cn">NA</span>    </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span> Anura Alsodidae     <span class="cn">NA</span>            <span class="dv">4</span>      Limnomedusa <span class="fu">macroglossa</span>    (Dumé… <span class="cn">NA</span>    </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span> Anura <span class="fu">Aromobatidae</span>  (Allobatinae) <span class="dv">5</span>      Allobates   bacurau        Simõe… <span class="cn">NA</span>    </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span> Anura <span class="fu">Aromobatidae</span>  (Allobatinae) <span class="dv">6</span>      Allobates   <span class="fu">brunneus</span>       (Cope… <span class="cn">NA</span>    </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span> Anura <span class="fu">Aromobatidae</span>  (Allobatinae) <span class="dv">7</span>      Allobates   caeruleodacty… (Lima… <span class="cn">NA</span>    </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span> Anura <span class="fu">Aromobatidae</span>  (Allobatinae) <span class="dv">8</span>      Allobates   caldwellae     Lima,… recen…</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span> Anura <span class="fu">Aromobatidae</span>  (Allobatinae) <span class="dv">9</span>      Allobates   carajas        Simõe… <span class="cn">NA</span>    </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> Anura <span class="fu">Aromobatidae</span>  (Allobatinae) <span class="dv">10</span>     Allobates   <span class="fu">conspicuus</span>     (Mora… <span class="cn">NA</span>    </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># … with 1,178 more rows</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> segalla2021</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1,188 × 49</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   species_id order family    subfamily genus epithet species author status common_name_br</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="sc">&lt;</span>dbl<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>     <span class="er">&lt;</span>chr<span class="sc">&gt;</span>     <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>         </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span>          <span class="dv">1</span> Anura Allophry… <span class="cn">NA</span>        Allo… relicta Alloph… Caram… <span class="cn">NA</span>     <span class="cn">NA</span>            </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span>          <span class="dv">2</span> Anura Allophry… <span class="cn">NA</span>        Allo… resple… Alloph… Castr… <span class="cn">NA</span>     Resplendent F…</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span>          <span class="dv">3</span> Anura Allophry… <span class="cn">NA</span>        Allo… ruthve… Alloph… Gaige… <span class="cn">NA</span>     <span class="cn">NA</span>            </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span>          <span class="dv">4</span> Anura Alsodidae <span class="cn">NA</span>        Limn… macrog… Limnom… (Dumé… <span class="cn">NA</span>     Rãzinha<span class="sc">-</span>de<span class="sc">-</span>co…</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span>          <span class="dv">5</span> Anura Aromobat… Allobati… Allo… bacurau Alloba… Simõe… <span class="cn">NA</span>     <span class="cn">NA</span>            </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span>          <span class="dv">6</span> Anura Aromobat… Allobati… Allo… brunne… Alloba… (Cope… <span class="cn">NA</span>     Chapada Rocke…</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span>          <span class="dv">7</span> Anura Aromobat… Allobati… Allo… caerul… Alloba… (Lima… <span class="cn">NA</span>     <span class="cn">NA</span>            </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span>          <span class="dv">8</span> Anura Aromobat… Allobati… Allo… caldwe… Alloba… Lima,… recen… <span class="cn">NA</span>            </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span>          <span class="dv">9</span> Anura Aromobat… Allobati… Allo… carajas Alloba… Simõe… <span class="cn">NA</span>     <span class="cn">NA</span>            </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>         <span class="dv">10</span> Anura Aromobat… Allobati… Allo… conspi… Alloba… (Mora… <span class="cn">NA</span>     <span class="cn">NA</span>            </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ 1,178 more rows</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ 39 more variables: category &lt;chr&gt;, endemic_br &lt;chr&gt;, AC &lt;dbl&gt;, AL &lt;dbl&gt;, AP &lt;dbl&gt;,</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   AM &lt;dbl&gt;, BA &lt;dbl&gt;, CE &lt;dbl&gt;, DF &lt;dbl&gt;, ES &lt;dbl&gt;, GO &lt;dbl&gt;, MA &lt;dbl&gt;, MT &lt;dbl&gt;,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">#   MS &lt;dbl&gt;, MG &lt;dbl&gt;, PA &lt;dbl&gt;, PB &lt;dbl&gt;, PR &lt;dbl&gt;, PE &lt;dbl&gt;, PI &lt;dbl&gt;, RJ &lt;dbl&gt;,</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#   RN &lt;dbl&gt;, RS &lt;dbl&gt;, RO &lt;dbl&gt;, RR &lt;dbl&gt;, SC &lt;dbl&gt;, SP &lt;dbl&gt;, SE &lt;dbl&gt;, TO &lt;dbl&gt;,</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#   AF &lt;dbl&gt;, PAN &lt;dbl&gt;, PAM &lt;dbl&gt;, AMZ &lt;dbl&gt;, CER &lt;dbl&gt;, CAA &lt;dbl&gt;, UNK &lt;dbl&gt;,</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#   tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
