@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R:c( 
            person("Paulo Barros de ", "Abreu Junior", , "pbarrosbio@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9839-0796")),
-           person("Mauricio Humberto ", "Vancine", , "mauricio.vancine@gmail.com", role = c("aut", "cre"),
+           person("Mauricio Humberto ", "Vancine", , "mauricio.vancine@gmail.com", role = c("aut"),
            comment = c(ORCID = "0000-0001-9650-7575")),
            person("Diogo B. ", "Provete", , "diogo.provete@ufms.br", role = c("aut"),
            comment = c(ORCID = "0000-0002-0097-0651"))
