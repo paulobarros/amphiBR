@@ -34,16 +34,16 @@ library(amphiBR)
 
 ## Dataset
 
-O dataset consiste de **1188** linhas com 10 colunas:
+O dataset consiste de **1188** linhas com 49 colunas:
 
+
+`species_id` - Número da espécie na lista
 
 `order` - Ordem
 
 `family` - Família
 
 `subfamily` - Subfamília
-
-`sp_num` - Número da espécie na lista
 
 `genus` - Gênero
 
@@ -53,28 +53,64 @@ O dataset consiste de **1188** linhas com 10 colunas:
 
 `author` - Autoria
 
-`status` - Observações
+`status` - Observações gerais do autor da Lista
+
+`common_name_br` - Nome popular no Brasil
 
 `category` - Cateogoria de Ameaça pela Portaria MMA 300/2022
+
+`endemic_br` - Se a espécie é ou não endêmica do país
+
+`AC-TO` - Ocorrência a nível estadual da espécie no país (1=ocorre, 0=não ocorre)
+
+`AF-UNK` - Ocorrência a nível de Biomas
+
+  * AF = Mata ATlântica
+  
+  * PAN = Pantanal
+  
+  * PAM = Pampa
+  
+  * AMZ = Amazônia
+  
+  * CER = Cerrado
+  
+  * CAA = Caatinga
+  
+  * UNK = Desconhecido
+  
+`tad_ext_morhp` - Descrição da morfologia externa do girino/larva
+
+`tad_int_oral_feat` - Descrição das características internas da cavidade oral do girino/larva
+
+`tad_chond` - Descrição do chondocrânio do girino/larva
+
+
 
 O dataset é automaticamente carregado junto com o pacote e pode ser acessado diretamente:
 
 ```r
-> amphibiansBR
-# A tibble: 1,188 × 8
-   order family        subfamily     sp_num genus       epithet        author status
-   <chr> <chr>         <chr>         <chr>  <chr>       <chr>          <chr>  <chr> 
- 1 Anura Allophrynidae NA            1      Allophryne  relicta        Caram… NA    
- 2 Anura Allophrynidae NA            2      Allophryne  resplendens    Castr… NA    
- 3 Anura Allophrynidae NA            3      Allophryne  ruthveni       Gaige… NA    
- 4 Anura Alsodidae     NA            4      Limnomedusa macroglossa    (Dumé… NA    
- 5 Anura Aromobatidae  (Allobatinae) 5      Allobates   bacurau        Simõe… NA    
- 6 Anura Aromobatidae  (Allobatinae) 6      Allobates   brunneus       (Cope… NA    
- 7 Anura Aromobatidae  (Allobatinae) 7      Allobates   caeruleodacty… (Lima… NA    
- 8 Anura Aromobatidae  (Allobatinae) 8      Allobates   caldwellae     Lima,… recen…
- 9 Anura Aromobatidae  (Allobatinae) 9      Allobates   carajas        Simõe… NA    
-10 Anura Aromobatidae  (Allobatinae) 10     Allobates   conspicuus     (Mora… NA    
-# … with 1,178 more rows
+> segalla2021
+# A tibble: 1,188 × 49
+   species_id order family    subfamily genus epithet species author status common_name_br
+        <dbl> <chr> <chr>     <chr>     <chr> <chr>   <chr>   <chr>  <chr>  <chr>         
+ 1          1 Anura Allophry… NA        Allo… relicta Alloph… Caram… NA     NA            
+ 2          2 Anura Allophry… NA        Allo… resple… Alloph… Castr… NA     Resplendent F…
+ 3          3 Anura Allophry… NA        Allo… ruthve… Alloph… Gaige… NA     NA            
+ 4          4 Anura Alsodidae NA        Limn… macrog… Limnom… (Dumé… NA     Rãzinha-de-co…
+ 5          5 Anura Aromobat… Allobati… Allo… bacurau Alloba… Simõe… NA     NA            
+ 6          6 Anura Aromobat… Allobati… Allo… brunne… Alloba… (Cope… NA     Chapada Rocke…
+ 7          7 Anura Aromobat… Allobati… Allo… caerul… Alloba… (Lima… NA     NA            
+ 8          8 Anura Aromobat… Allobati… Allo… caldwe… Alloba… Lima,… recen… NA            
+ 9          9 Anura Aromobat… Allobati… Allo… carajas Alloba… Simõe… NA     NA            
+10         10 Anura Aromobat… Allobati… Allo… conspi… Alloba… (Mora… NA     NA            
+# ℹ 1,178 more rows
+# ℹ 39 more variables: category <chr>, endemic_br <chr>, AC <dbl>, AL <dbl>, AP <dbl>,
+#   AM <dbl>, BA <dbl>, CE <dbl>, DF <dbl>, ES <dbl>, GO <dbl>, MA <dbl>, MT <dbl>,
+#   MS <dbl>, MG <dbl>, PA <dbl>, PB <dbl>, PR <dbl>, PE <dbl>, PI <dbl>, RJ <dbl>,
+#   RN <dbl>, RS <dbl>, RO <dbl>, RR <dbl>, SC <dbl>, SP <dbl>, SE <dbl>, TO <dbl>,
+#   AF <dbl>, PAN <dbl>, PAM <dbl>, AMZ <dbl>, CER <dbl>, CAA <dbl>, UNK <dbl>,
+#   tad_ext_morph <chr>, tad_int_oral_feat <chr>, tad_chond <chr>
 # ℹ Use `print(n = ...)` to see more rows
 
 ```
