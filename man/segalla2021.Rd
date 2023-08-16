@@ -38,7 +38,7 @@ segalla2021
 }
 \description{
 A dataset of the official Brazilian Amphibian Species List publish
-by the Brazilian Herpetolgical Society (SBH) with species conservation
+by the Brazilian Herpetological Society (SBH) with species conservation
 status category, State and Biome Level occurrence data, endemism and common names by MMA 300/2022, Tadpoles description by
 Brazilian Tadpole Database (Provete et al.,2012).
 }
