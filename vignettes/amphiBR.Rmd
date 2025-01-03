@@ -37,7 +37,7 @@ Precisamos primeiro obter uma lista aleatória de espécies para usar no nosso e
 Existem diversas formas de entrar com uma lista de espécies em particular. Ela pode ser criada diretamente no script como um `data.frame` contendo duas colunas, uma para **gênero** e outra para o **epíteto específico**, ou pode ser lida a partir de uma planila do excel ou arquivo .csv/.txt. 
 
 ```{r}
-minhas_especies <- segalla2021 %>%
+minhas_especies <- Segalla_2021 %>%
   filter(species_id %in% sample(1:1188, size = 20, replace = FALSE)) %>%
   select(order, family, subfamily,species_id, genus, epithet)
 
@@ -49,7 +49,7 @@ Com a nossa lista das espécies de interesse em mãos, basta agora filtar o noss
 ```{r}
 options(knitr.kable.NA = '')
 
-segalla2021 %>%
+Segalla_2021 %>%
   filter(species_id %in% minhas_especies$species_id ) %>%
   select(order, family, subfamily, genus, epithet) %>%
   kable(col.names = c("Ordem","Família", "Subfamília","Gênero","Epíteto Específico")) %>%
