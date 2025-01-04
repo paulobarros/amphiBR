@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   amphiBR: amphiBR.html
-last_built: 2025-01-03T14:29Z
+last_built: 2025-01-04T13:08Z
 urls:
   reference: https://paulobarros.github.io/amphiBR/reference
   article: https://paulobarros.github.io/amphiBR/articles
