@@ -12,6 +12,8 @@ Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil pub
 
 O dataset foi extraído da publicação por Segalla et al (2021) na Revista Brasileira de Herpetologia, e disponível também no link <https://zenodo.org/record/4716176>
 
+A partir da versão 0.1.0 o pacote inclui também a edição de 2026 da lista, de Drummond et al (2026), no dataset `drummond2026` (ver [abaixo](#dataset-drummond2026)).
+
 O pacote atualmente conta também com informações sobre o status de conservação, nome comum, ocorrências por estado da federação, endemismo e ocorrências por biomas. Todas obtidas através da última avaliação do MMA (2022) sobre os anfíbios do Brasil. Também incluímos no pacote informações do Brazilian Tadpole Database (Provete et al., 2012), com informações sobre as espécies que atualmente possuem a descrição dos girinos.
 
 O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.
@@ -117,3 +119,38 @@ O dataset é automaticamente carregado junto com o pacote e pode ser acessado di
 
 ```
 
+
+## Dataset `drummond2026`
+
+Edição de 2026 da Lista de Anfíbios do Brasil da SBH: Drummond, L.O., Santana, D.J., Lima, A.P. & Toledo, L.F. (2026). List of Amphibians of Brazil. *Herpetologia Brasileira*, 15(2). <https://doi.org/10.5281/zenodo.18340087> (licença CC BY 4.0).
+
+São **1251** espécies (1206 Anura, 40 Gymnophiona e 5 Caudata). Em relação a Segalla et al (2021), 41 espécies saíram da lista e 104 entraram (75 descritas desde 2021 e 29 por mudança taxonômica ou novo registro no Brasil). O dataset tem 11 colunas:
+
+`species_id`, `order`, `family`, `subfamily`, `genus`, `epithet`, `species` e `author` - como em `segalla2021`
+
+`tribe` - Tribo (só em Hylidae; a subfamília é Hylinae)
+
+`status` - Mudança em relação a Segalla et al (2021): "recently described species", "taxonomic change or new record" ou "new combination" (espécie que mudou de gênero, como *Scinax* → *Ololygon*)
+
+`category` - Categoria de ameaça pela Portaria MMA nº 1.704/2026 (CR, EN, VU, "CR (PE)" = possivelmente extinta, EX = extinta). `NA` = espécie fora das listas de ameaçadas e extintas da Portaria
+
+A lista completa das mudanças entre 2021 e 2026, incluindo as espécies removidas e os sinônimos, está em [`data-raw/mudancas_2021_2026.csv`](data-raw/mudancas_2021_2026.csv). Os scripts que extraem a lista do PDF e a Portaria do Diário Oficial também estão em `data-raw/`.
+
+```r
+> drummond2026
+# A tibble: 1,251 × 11
+   species_id order family    subfamily tribe genus epithet species author status category
+        <int> <chr> <chr>     <chr>     <chr> <chr> <chr>   <chr>   <chr>  <chr>  <chr>   
+ 1          1 Anura Allophry… <NA>      <NA>  Allo… relicta Alloph… Caram… <NA>   <NA>    
+ 2          2 Anura Allophry… <NA>      <NA>  Allo… resple… Alloph… Castr… <NA>   <NA>    
+ 3          3 Anura Allophry… <NA>      <NA>  Allo… ruthve… Alloph… Gaige… <NA>   <NA>    
+ 4          4 Anura Alsodidae <NA>      <NA>  Limn… macrog… Limnom… (Dumé… <NA>   <NA>    
+ 5          5 Anura Aromobat… Allobati… <NA>  Allo… albive… Alloba… Souza… recen… <NA>    
+ 6          6 Anura Aromobat… Allobati… <NA>  Allo… bacurau Alloba… Simõe… <NA>   <NA>    
+ 7          7 Anura Aromobat… Allobati… <NA>  Allo… brunne… Alloba… (Cope… <NA>   <NA>    
+ 8          8 Anura Aromobat… Allobati… <NA>  Allo… caerul… Alloba… (Lima… <NA>   <NA>    
+ 9          9 Anura Aromobat… Allobati… <NA>  Allo… caldwe… Alloba… Lima,… <NA>   <NA>    
+10         10 Anura Aromobat… Allobati… <NA>  Allo… carajas Alloba… Simõe… <NA>   <NA>    
+# ℹ 1,241 more rows
+
+```

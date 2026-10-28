@@ -61,6 +61,8 @@ segalla2021 %>%
   
 ```
 
+A mesma receita funciona com a edição de 2026 da lista [@drummond2026lista], no dataset `drummond2026`, que traz também a categoria de ameaça pela Portaria MMA nº 1.704/2026 na coluna `category`. Basta trocar `segalla2021` por `drummond2026` no código acima (e sortear em `1:1251`).
+
 Simples não? Boas listas! Dúvidas, críticas, problemas ou sugestões <pbarrosbio@gmail.com>
 
 
