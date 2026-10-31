@@ -1,0 +1,62 @@
+annex,new_listing,order,family,species,category
+I,False,Anura,Aromobatidae,Anomaloglossus apiau,EN
+I,False,Anura,Aromobatidae,Anomaloglossus tepequem,CR (PE)
+I,False,Anura,Brachycephalidae,Brachycephalus mirissimus,VU
+I,False,Anura,Brachycephalidae,Brachycephalus pernix,CR
+I,False,Anura,Brachycephalidae,Brachycephalus quiririensis,EN
+I,False,Anura,Brachycephalidae,Ischnocnema epipeda,CR (PE)
+I,False,Anura,Brachycephalidae,Ischnocnema garciai,CR
+I,False,Anura,Brachycephalidae,Ischnocnema karst,VU
+I,False,Anura,Brachycephalidae,Ischnocnema manezinho,EN
+I,False,Anura,Bufonidae,Melanophryniscus admirabilis,CR
+I,False,Anura,Bufonidae,Melanophryniscus biancae,EN
+I,False,Anura,Bufonidae,Melanophryniscus cambaraensis,EN
+I,False,Anura,Bufonidae,Melanophryniscus formosus,VU
+I,False,Anura,Bufonidae,Melanophryniscus klappenbachi,VU
+I,False,Anura,Bufonidae,Melanophryniscus macrogranulosus,EN
+I,False,Anura,Bufonidae,Melanophryniscus montevidensis,VU
+I,False,Anura,Bufonidae,Melanophryniscus setiba,VU
+I,False,Anura,Bufonidae,Rhinella casconi,CR
+I,False,Anura,Ceratophryidae,Ceratophrys ornata,CR (PE)
+I,False,Anura,Cycloramphidae,Cycloramphus diringshofeni,CR
+I,False,Anura,Cycloramphidae,Cycloramphus faustoi,VU
+I,False,Anura,Cycloramphidae,Cycloramphus stejnegeri,CR (PE)
+I,False,Anura,Cycloramphidae,Thoropa lutzi,CR (PE)
+I,False,Anura,Cycloramphidae,Thoropa petropolitana,CR (PE)
+I,False,Anura,Eleutherodactylidae,Adelophryne maranguapensis,CR
+I,False,Anura,Hylidae,Boana buriti,VU
+I,False,Anura,Hylidae,Bokermannohyla napolii,VU
+I,False,Anura,Hylidae,Bokermannohyla vulcaniae,EN
+I,False,Anura,Hylidae,Julianus pinimus,VU
+I,False,Anura,Hylidae,Nyctimantis pomba,CR
+I,False,Anura,Hylidae,Ololygon alcatraz,VU
+I,False,Anura,Hylidae,Ololygon faivovichi,VU
+I,False,Anura,Hylidae,Ololygon muriciensis,CR
+I,False,Anura,Hylidae,Ololygon peixotoi,CR (PE)
+I,False,Anura,Hylidae,Sphaenorhynchus bromelicola,EN
+I,False,Anura,Hylidae,Sphaenorhynchus cammaeus,CR
+I,False,Anura,Hylidae,Sphaenorhynchus canga,CR
+I,False,Anura,Hylidae,Xenohyla truncata,VU
+I,False,Anura,Hylodidae,Crossodactylus boulengeri,CR (PE)
+I,False,Anura,Hylodidae,Crossodactylus dantei,CR
+I,False,Anura,Hylodidae,Crossodactylus dispar,CR (PE)
+I,False,Anura,Hylodidae,Crossodactylus franciscanus,CR (PE)
+I,False,Anura,Hylodidae,Hylodes glaber,CR (PE)
+I,False,Anura,Hylodidae,Hylodes magalhaesi,VU
+I,False,Anura,Hylodidae,Hylodes mertensi,CR
+I,False,Anura,Hylodidae,Hylodes sazimai,EN
+I,False,Anura,Leptodactylidae,Crossodactylodes itambe,CR
+I,False,Anura,Leptodactylidae,Crossodactylodes izecksohni,EN
+I,False,Anura,Leptodactylidae,Paratelmatobius lutzii,CR (PE)
+I,False,Anura,Leptodactylidae,Physalaemus soaresi,CR
+I,False,Anura,Microhylidae,Chiasmocleis alagoana,VU
+I,False,Anura,Odontophrynidae,Proceratophrys ararype,CR
+I,False,Anura,Odontophrynidae,Proceratophrys palustris,CR
+I,False,Anura,Odontophrynidae,Proceratophrys sanctaritae,CR
+I,False,Anura,Phyllomedusidae,Phrynomedusa marginata,CR (PE)
+I,False,Anura,Phyllomedusidae,Phrynomedusa vanzolinii,CR (PE)
+I,False,Anura,Phyllomedusidae,Pithecopus rusticus,CR
+I,False,Anura,Strabomantidae,Euparkerella robusta,CR
+I,False,Anura,Strabomantidae,Holoaden bradei,CR (PE)
+II,False,Anura,Hylidae,Boana cymbalum,EX
+II,False,Anura,Phyllomedusidae,Phrynomedusa fimbriata,EX
