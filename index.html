@@ -7,36 +7,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>A R Dataset for the official Brazilian List of Amphibians • amphiBR</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="A R Dataset for the official Brazilian List of Amphibians">
-<meta name="description" content="A R Dataset for the official Brazilian List of Amphibians, published by the Brazilian Herpetological Society. This is a personal initiative, the data presented here was taken from the publication by Segalla et al (2021) and aims to help students and professionals in building species list of the Brazilian amphibian fauna.">
-<meta property="og:description" content="A R Dataset for the official Brazilian List of Amphibians, published by the Brazilian Herpetological Society. This is a personal initiative, the data presented here was taken from the publication by Segalla et al (2021) and aims to help students and professionals in building species list of the Brazilian amphibian fauna.">
+<meta name="description" content="A R Dataset for the official Brazilian List of Amphibians, published by the Brazilian Herpetological Society. This is a personal initiative, the data presented here was taken from the publications by Segalla et al (2021) and Drummond et al (2026), with the threat categories of the Portaria MMA 1.704/2026, and aims to help students and professionals in building species list of the Brazilian amphibian fauna.">
+<meta property="og:description" content="A R Dataset for the official Brazilian List of Amphibians, published by the Brazilian Herpetological Society. This is a personal initiative, the data presented here was taken from the publications by Segalla et al (2021) and Drummond et al (2026), with the threat categories of the Portaria MMA 1.704/2026, and aims to help students and professionals in building species list of the Brazilian amphibian fauna.">
 </head>
 <body>
-    <a href="#main" class="visually-hidden-focusable">Avance para o conteúdo</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
     <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">amphiBR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Alternar de navegação">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item"><a class="nav-link" href="articles/amphiBR.html">Primeiros passos</a></li>
-<li class="nav-item"><a class="nav-link" href="reference/index.html">Referência</a></li>
+<li class="nav-item"><a class="nav-link" href="articles/amphiBR.html">Get started</a></li>
+<li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
- <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Procurar" data-search-index="search.json">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/paulobarros/amphiBR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
@@ -54,6 +55,7 @@
 
 <p>Pacote R com dataset da publicação oficial da Lista de Anfíbios do Brasil publicada pela Sociedade Brasileira de Herpetologia.</p>
 <p>O dataset foi extraído da publicação por Segalla et al (2021) na Revista Brasileira de Herpetologia, e disponível também no link <a href="https://zenodo.org/record/4716176" class="external-link uri">https://zenodo.org/record/4716176</a></p>
+<p>A partir da versão 0.1.0 o pacote inclui também a edição de 2026 da lista, de Drummond et al (2026), no dataset <code>drummond2026</code> (ver <a href="#dataset-drummond2026">abaixo</a>).</p>
 <p>O pacote atualmente conta também com informações sobre o status de conservação, nome comum, ocorrências por estado da federação, endemismo e ocorrências por biomas. Todas obtidas através da última avaliação do MMA (2022) sobre os anfíbios do Brasil. Também incluímos no pacote informações do Brazilian Tadpole Database (Provete et al., 2012), com informações sobre as espécies que atualmente possuem a descrição dos girinos.</p>
 <p>O objetivo deste pacote é facilitar a geração de listas de espécie para projetos, inventários de fauna, ou qualquer outro tipo de documento.</p>
 <p>Dúvidas, críticas e sugestões são sempre bem-vindas!</p>
@@ -123,19 +125,46 @@
 <span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="co">#   tad_ext_morph &lt;chr&gt;, tad_int_oral_feat &lt;chr&gt;, tad_chond &lt;chr&gt;</span></span>
 <span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code></pre></div>
 </div>
+<div class="section level2">
+<h2 id="dataset-drummond2026">Dataset <code>drummond2026</code>
+<a class="anchor" aria-label="anchor" href="#dataset-drummond2026"></a>
+</h2>
+<p>Edição de 2026 da Lista de Anfíbios do Brasil da SBH: Drummond, L.O., Santana, D.J., Lima, A.P. &amp; Toledo, L.F. (2026). List of Amphibians of Brazil. <em>Herpetologia Brasileira</em>, 15(2). <a href="https://doi.org/10.5281/zenodo.18340087" class="external-link uri">https://doi.org/10.5281/zenodo.18340087</a> (licença CC BY 4.0).</p>
+<p>São <strong>1251</strong> espécies (1206 Anura, 40 Gymnophiona e 5 Caudata). Em relação a Segalla et al (2021), 41 espécies saíram da lista e 104 entraram (75 descritas desde 2021 e 29 por mudança taxonômica ou novo registro no Brasil). O dataset tem 11 colunas:</p>
+<p><code>species_id</code>, <code>order</code>, <code>family</code>, <code>subfamily</code>, <code>genus</code>, <code>epithet</code>, <code>species</code> e <code>author</code> - como em <code>segalla2021</code></p>
+<p><code>tribe</code> - Tribo (só em Hylidae; a subfamília é Hylinae)</p>
+<p><code>status</code> - Mudança em relação a Segalla et al (2021): “recently described species”, “taxonomic change or new record” ou “new combination” (espécie que mudou de gênero, como <em>Scinax</em> → <em>Ololygon</em>)</p>
+<p><code>category</code> - Categoria de ameaça pela Portaria MMA nº 1.704/2026 (CR, EN, VU, “CR (PE)” = possivelmente extinta, EX = extinta). <code>NA</code> = espécie fora das listas de ameaçadas e extintas da Portaria</p>
+<p>A lista completa das mudanças entre 2021 e 2026, incluindo as espécies removidas e os sinônimos, está em <a href="data-raw/mudancas_2021_2026.csv"><code>data-raw/mudancas_2021_2026.csv</code></a>. Os scripts que extraem a lista do PDF e a Portaria do Diário Oficial também estão em <code>data-raw/</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="sc">&gt;</span> drummond2026</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co"># A tibble: 1,251 × 11</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>   species_id order family    subfamily tribe genus epithet species author status category</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>        <span class="sc">&lt;</span>int<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>     <span class="er">&lt;</span>chr<span class="sc">&gt;</span>     <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span> <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>  <span class="er">&lt;</span>chr<span class="sc">&gt;</span>   </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a> <span class="dv">1</span>          <span class="dv">1</span> Anura Allophry… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>      <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… relicta Alloph… Caram… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a> <span class="dv">2</span>          <span class="dv">2</span> Anura Allophry… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>      <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… resple… Alloph… Castr… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a> <span class="dv">3</span>          <span class="dv">3</span> Anura Allophry… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>      <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… ruthve… Alloph… Gaige… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a> <span class="dv">4</span>          <span class="dv">4</span> Anura Alsodidae <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>      <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Limn… macrog… Limnom… (Dumé… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a> <span class="dv">5</span>          <span class="dv">5</span> Anura Aromobat… Allobati… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… albive… Alloba… Souza… recen… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a> <span class="dv">6</span>          <span class="dv">6</span> Anura Aromobat… Allobati… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… bacurau Alloba… Simõe… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a> <span class="dv">7</span>          <span class="dv">7</span> Anura Aromobat… Allobati… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… brunne… Alloba… (Cope… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a> <span class="dv">8</span>          <span class="dv">8</span> Anura Aromobat… Allobati… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… caerul… Alloba… (Lima… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a> <span class="dv">9</span>          <span class="dv">9</span> Anura Aromobat… Allobati… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… caldwe… Alloba… Lima,… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="dv">10</span>         <span class="dv">10</span> Anura Aromobat… Allobati… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>  Allo… carajas Alloba… Simõe… <span class="sc">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>   <span class="er">&lt;</span><span class="cn">NA</span><span class="sc">&gt;</span>    </span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># ℹ 1,241 more rows</span></span></code></pre></div>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/paulobarros/amphiBR/" class="external-link">Navegue pelo código-fonte</a></li>
-<li><a href="https://github.com/paulobarros/amphiBR/issues" class="external-link">Reportar um erro</a></li>
+<li><a href="https://github.com/paulobarros/amphiBR/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/paulobarros/amphiBR/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-<div class="licen-a">
-<h2 data-toc-skip>Licença</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="LICENSE.html">Licença completa</a></li>
+<li><a href="LICENSE.html">Full license</a></li>
 <li><small>GPL (&gt;= 3)</small></li>
 </ul>
 </div>
@@ -144,21 +173,22 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citando amphiBR</a></li>
+<li><a href="authors.html#citation">Citing amphiBR</a></li>
 </ul>
 </div>
 
-<div class="desenvolvedores">
-<h2 data-toc-skip>Desenvolvedores</h2>
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Paulo Barros de Abreu Junior <br><small class="roles"> Autor, mantenedor </small> <a href="https://orcid.org/0000-0001-9839-0796" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Mauricio Humberto Vancine <br><small class="roles"> Autor </small> <a href="https://orcid.org/0000-0001-9650-7575" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Diogo B. Provete <br><small class="roles"> Autor </small> <a href="https://orcid.org/0000-0002-0097-0651" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Paulo Barros de Abreu Junior <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-9839-0796" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Mauricio Humberto Vancine <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-9650-7575" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Diogo B. Provete <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0097-0651" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
-<div class="status-de-desenvolvimento">
-<h2 data-toc-skip>Status de desenvolvimento</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/paulobarros/amphiBR/blob/master/LICENSE.md" class="external-link"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
 <li><a href="https://twitter.com/pbarrosjr" class="external-link"><img src="https://img.shields.io/twitter/follow/pbarrosjr?color=%2315202B&amp;label=Seguir%20%40pbarrosjr&amp;style=social" alt="Twitter Follow"></a></li>
@@ -171,11 +201,11 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Desenvolvido por Paulo Barros de Abreu Junior, Mauricio Humberto Vancine, Diogo B. Provete.</p>
+  <p>Developed by Paulo Barros de Abreu Junior, Mauricio Humberto Vancine, Diogo B. Provete.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site criado com <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>

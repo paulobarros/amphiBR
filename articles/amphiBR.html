@@ -7,34 +7,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>amphiBR • amphiBR</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="amphiBR">
 </head>
 <body>
-    <a href="#main" class="visually-hidden-focusable">Avance para o conteúdo</a>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
     <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">amphiBR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Alternar de navegação">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="active nav-item"><a class="nav-link" href="../articles/amphiBR.html">Primeiros passos</a></li>
-<li class="nav-item"><a class="nav-link" href="../reference/index.html">Referência</a></li>
+<li class="active nav-item"><a class="nav-link" href="../articles/amphiBR.html">Get started</a></li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
- <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Procurar" data-search-index="../search.json">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/paulobarros/amphiBR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
@@ -53,7 +54,7 @@
       <h1>amphiBR</h1>
             
       
-      <small class="dont-index">Fonte: <a href="https://github.com/paulobarros/amphiBR/blob/master/vignettes/amphiBR.Rmd" class="external-link"><code>vignettes/amphiBR.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/paulobarros/amphiBR/blob/master/vignettes/amphiBR.Rmd" class="external-link"><code>vignettes/amphiBR.Rmd</code></a></small>
       <div class="d-none name"><code>amphiBR.Rmd</code></div>
     </div>
 
@@ -63,7 +64,8 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/paulobarros/amphiBR" class="external-link">amphiBR</a></span><span class="op">)</span></span></code></pre></div>
 <p>Neste pequeno exemplo vamos abordar como gerar uma lista de espécies
 obedecendo a taxonomia proposta pela Lista de Anfíbios do Brasil da SBH
-<span class="citation">(SEGALLA et al., 2021)</span>.</p>
+<span class="citation">(<span class="nocase">SEGALLA et al.</span>,
+2021)</span>.</p>
 <p>Para realizar essa tarefa precisaremos de alguns pacotes auxiliares
 além do <code>amphiBR</code>. O código para instalação dos pacotes está
 comentado, caso você ainda não possua o pacote instalado basta
@@ -73,8 +75,6 @@ descomentar e executar as linhas correspondentes.</p>
 <span><span class="co"># install.pakcages("kableExtra")</span></span>
 <span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; Error in get(paste0(generic, ".", class), envir = get_method_env()) : </span></span>
-<span><span class="co">#&gt;   object 'type_sum.accel' not found</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
 <span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
@@ -83,7 +83,7 @@ descomentar e executar as linhas correspondentes.</p>
 <span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/" class="external-link">kableExtra</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://haozhu233.github.io/kableExtra/" class="external-link">kableExtra</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Attaching package: 'kableExtra'</span></span>
 <span><span class="co">#&gt; The following object is masked from 'package:dplyr':</span></span>
@@ -92,9 +92,10 @@ descomentar e executar as linhas correspondentes.</p>
 <p>Precisamos primeiro obter uma lista aleatória de espécies para usar
 no nosso exemplo, importante frisar que ao utilizar a sua lista de
 espécies para filtrar o banco de dados, a nomenclatura deve seguir a
-adotada por <span class="citation">(SEGALLA et al., 2021)</span> no qual
-se baseia este pacote. No nosso caso utilizaremos os dados da própria
-lista para sortear 20 espécies aleatoriamente.</p>
+adotada por <span class="citation">(<span class="nocase">SEGALLA et
+al.</span>, 2021)</span> no qual se baseia este pacote. No nosso caso
+utilizaremos os dados da própria lista para sortear 20 espécies
+aleatoriamente.</p>
 <p>Existem diversas formas de entrar com uma lista de espécies em
 particular. Ela pode ser criada diretamente no script como um
 <code>data.frame</code> contendo duas colunas, uma para
@@ -365,15 +366,25 @@ redacta
 </tr>
 </tbody>
 </table>
+<p>A mesma receita funciona com a edição de 2026 da lista <span class="citation">(DRUMMOND et al., 2026)</span>, no dataset
+<code>drummond2026</code>, que traz também a categoria de ameaça pela
+Portaria MMA nº 1.704/2026 na coluna <code>category</code>. Basta trocar
+<code>segalla2021</code> por <code>drummond2026</code> no código acima
+(e sortear em <code>1:1251</code>).</p>
 <p>Simples não? Boas listas! Dúvidas, críticas, problemas ou sugestões
 <a href="mailto:pbarrosbio@gmail.com" class="email">pbarrosbio@gmail.com</a></p>
 <div class="section level5">
 <h5 id="referências">Referências<a class="anchor" aria-label="anchor" href="#refer%C3%AAncias"></a>
 </h5>
 <div id="refs" class="references csl-bib-body" entry-spacing="1">
+<div id="ref-drummond2026lista" class="csl-entry">
+DRUMMOND, L. et al. <a href="https://doi.org/10.5281/zenodo.18340087" class="external-link">List of Amphibians of
+Brazil</a>. <strong>Herpetol. Bras</strong>, v. 15, n. 2, 2026.
+</div>
 <div id="ref-segalla2021lista" class="csl-entry">
-SEGALLA, M. et al. Lista de Anf<span>ı́</span>bios do Brasil.
-<strong>Herpetol. Bras</strong>, v. 10, p. 122–226, 2021.
+<span class="nocase">SEGALLA, M. et al.</span> Lista de
+Anf<span>ı́</span>bios do Brasil. <strong>Herpetol. Bras</strong>, v. 10,
+p. 122–226, 2021.
 </div>
 </div>
 </div>
@@ -383,11 +394,11 @@ SEGALLA, M. et al. Lista de Anf<span>ı́</span>bios do Brasil.
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Desenvolvido por Paulo Barros de Abreu Junior, Mauricio Humberto Vancine, Diogo B. Provete.</p>
+  <p>Developed by Paulo Barros de Abreu Junior, Mauricio Humberto Vancine, Diogo B. Provete.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site criado com <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>
